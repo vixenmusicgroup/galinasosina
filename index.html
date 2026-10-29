@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><a href="./">GALINA SOSINA</a><div><a href="#album">Альбом</a><a href="https://t.me/galinamanson" target="_blank" rel="noopener">Telegram</a></div></nav>
+<header class="bar"><a class="logo" href="./">GALINA SOSINA</a><button class="burger" aria-expanded="false" aria-controls="menu">Меню</button><nav id="menu" aria-label="Основное меню"><a href="./" aria-current="page">Главная</a><a href="#" class="soon" title="Скоро">О Галине</a><a href="#" class="soon" title="Скоро">Релизы</a><a href="#" class="soon" title="Скоро">Концерты</a><a href="#" class="soon" title="Скоро">Мерч</a><a href="#" class="soon" title="Скоро">Контакты</a></nav></header>
 <header class="hero">
 <h1 class="name"><span><i>Galina</i></span><span><i>Sosina</i></span></h1>
 <div class="sub"><p>Новый альбом «МИСС БОГИНЯ» уже вышел.</p><a class="open" href="album.html">Слушать альбом</a></div>
@@ -21,4 +21,9 @@
 <div><p class="meta">Новый альбом</p><a class="title" href="album.html">Мисс Богиня</a><a class="open" href="album.html">Где слушать</a></div>
 </main>
 <footer><span>© GALINA SOSINA</span><a href="https://t.me/galinamanson" target="_blank" rel="noopener">t.me/galinamanson</a></footer>
+<script>
+const b=document.querySelector('.burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Закрыть':'Меню';document.body.style.overflow=o?'hidden':''});
+document.querySelectorAll('.soon').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+</script>
 </body></html>

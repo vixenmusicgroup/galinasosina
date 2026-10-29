@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head>
 <body>
-<nav><a href="./">GALINA SOSINA</a><div><a href="./">Назад</a></div></nav>
+<header class="bar"><a class="logo" href="./">GALINA SOSINA</a><button class="burger" aria-expanded="false" aria-controls="menu">Меню</button><nav id="menu" aria-label="Основное меню"><a href="./">Главная</a><a href="#" class="soon" title="Скоро">О Галине</a><a href="album.html" aria-current="page">Релизы</a><a href="#" class="soon" title="Скоро">Концерты</a><a href="#" class="soon" title="Скоро">Мерч</a><a href="#" class="soon" title="Скоро">Контакты</a></nav></header>
 <header class="top">
 <div class="cover"><span>МИСС<br>БОГИНЯ</span><img src="cover.jpg" alt="Обложка альбома «МИСС БОГИНЯ»" onerror="this.remove()"></div>
 <div><h1>Мисс<br>Богиня</h1><p>Альбом GALINA SOSINA. Выберите, где слушать и читать.</p></div>
@@ -17,4 +17,9 @@
 <a href="https://genius.com/albums/Galina-sosina/Miss-goddess" target="_blank" rel="noopener"><strong>Genius</strong><span>Тексты и информация</span></a>
 </main>
 <footer><span>© GALINA SOSINA</span><a href="./">На главную</a></footer>
+<script>
+const b=document.querySelector('.burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);b.textContent=o?'Закрыть':'Меню';document.body.style.overflow=o?'hidden':''});
+document.querySelectorAll('.soon').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+</script>
 </body></html>
